@@ -11,10 +11,10 @@ namespace FTN.Common
 
 		public EnumDescs()
 		{
-			property2enumType.Add(ModelCode.CONDEQ_PHASES, typeof(PhaseCode));
-			property2enumType.Add(ModelCode.POWERTR_FUNC, typeof(TransformerFunction));
-			property2enumType.Add(ModelCode.POWERTRWINDING_CONNTYPE, typeof(WindingConnection));
-			property2enumType.Add(ModelCode.POWERTRWINDING_WINDTYPE, typeof(WindingType));														
+			property2enumType.Add(ModelCode.PRODUCTASSET_MODEL_USERKIND, typeof(AssetModelUsageKind));
+			property2enumType.Add(ModelCode.SEAL_CONDITION, typeof(SealConditionKind));
+			property2enumType.Add(ModelCode.SEAL_KIND, typeof(SealKind));
+			property2enumType.Add(ModelCode.PRODUCTASSET_MODEL_STANDARDKIND, typeof(CorporateStandardKind));														
 		}
 
 		public List<string> GetEnumList(ModelCode propertyId)

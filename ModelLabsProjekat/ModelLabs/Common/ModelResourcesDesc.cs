@@ -24,11 +24,15 @@ namespace FTN.Common
 		/// </summary>
 		private Dictionary<ModelCode, string> propertyIds = new Dictionary<ModelCode, string>(new ModelCodeComparer());
 
-		/// <summary>
-		/// Initializes a new instance of the ResourcePropertiesDesc class.
-		/// </summary>
-		/// <param name="resourceId">Model type code</param>
-		public ResourcePropertiesDesc(ModelCode resourceId)
+        public ResourcePropertiesDesc()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ResourcePropertiesDesc class.
+        /// </summary>
+        /// <param name="resourceId">Model type code</param>
+        public ResourcePropertiesDesc(ModelCode resourceId)
 		{
 			this.resourceId = resourceId;
 			this.resourceName = resourceId.ToString();			
@@ -330,6 +334,11 @@ namespace FTN.Common
 			get { return nonAbstractClassIds; }
 			set { nonAbstractClassIds = value; }
 		}
+		public static  HashSet<DMSType> getTypes()
+        {
+			HashSet<DMSType> types = new HashSet<DMSType>();
+			return types;
+        }
 
 		/// <summary>
 		/// Gets dictionary of not settable property Ids.
@@ -866,20 +875,24 @@ namespace FTN.Common
 
 		private void InitializeTypeIdsInInsertOrder()
 		{			
-			typeIdsInInsertOrder.Add(ModelCode.BASEVOLTAGE);
-			typeIdsInInsertOrder.Add(ModelCode.LOCATION);
-			typeIdsInInsertOrder.Add(ModelCode.POWERTR);
-			typeIdsInInsertOrder.Add(ModelCode.POWERTRWINDING);
-			typeIdsInInsertOrder.Add(ModelCode.WINDINGTEST);			
+			typeIdsInInsertOrder.Add(ModelCode.ASSET_INFO);
+			typeIdsInInsertOrder.Add(ModelCode.PRODUCTASSET_MODEL);
+			typeIdsInInsertOrder.Add(ModelCode.ASSET_OWNER);
+			typeIdsInInsertOrder.Add(ModelCode.ASSET_CONTAINER);
+			typeIdsInInsertOrder.Add(ModelCode.ASSET);
+			typeIdsInInsertOrder.Add(ModelCode.SEAL);						
+			typeIdsInInsertOrder.Add(ModelCode.COMMEDIA);			
 		}
 
 		private void InitializeNotSettablePropertyIds()
 		{			
 			notSettablePropertyIds.Add(ModelCode.IDOBJ_GID);
-			notSettablePropertyIds.Add(ModelCode.BASEVOLTAGE_CONDEQS);
-			notSettablePropertyIds.Add(ModelCode.LOCATION_PSRS);
-			notSettablePropertyIds.Add(ModelCode.POWERTRWINDING_TESTS);
-            notSettablePropertyIds.Add(ModelCode.POWERTR_WINDINGS);	
+			notSettablePropertyIds.Add(ModelCode.ASSET_ORGANISATIONROLES);
+			notSettablePropertyIds.Add(ModelCode.ASSET_ORGANISATION_ROLE_ASSETS);
+			notSettablePropertyIds.Add(ModelCode.ASSET_CONTAINER_SEAL);
+            notSettablePropertyIds.Add(ModelCode.ASSET_CONTAINER_ASSETS);	
+            notSettablePropertyIds.Add(ModelCode.ASSETINFO_ASSETS);	
+            notSettablePropertyIds.Add(ModelCode.ASSETINFO_ASSETMODEL);	
 		}
 	
 		# endregion Initialization of metadata

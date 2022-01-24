@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
+using FTN.Common.GDA;
+using System.IO;
 
 namespace FTN.Common
 {	
@@ -16,12 +18,15 @@ namespace FTN.Common
 	public class UpdateResult
 	{
 		private Dictionary<long, long> globalIdPairs;
+		public static List<long> getMeGids = new List<long>();
+		public static Dictionary<long, long> gids;
 		private string message;
 		private ResultType result;		
 
 		public UpdateResult()			
 		{
 			globalIdPairs = new Dictionary<long, long>();
+			gids = new Dictionary<long, long>();
 			message = string.Empty;
 			result = ResultType.Succeeded;			
 		}
@@ -46,7 +51,11 @@ namespace FTN.Common
 			get { return result; }
 			set { result = value; }
 		}
-
+		[DataMember]
+		public List<long> getter
+        {
+            get { return getMeGids; }
+        }
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -54,12 +63,14 @@ namespace FTN.Common
             sb.AppendFormat("Update result: {0}\n", result);
             sb.AppendFormat("Message: {0}\n", message);
             sb.AppendLine("GlobalId pairs:");
-
+			StreamWriter sw = new StreamWriter("C:\\Users\\TUF\\Desktop\\IEESProjekat\\ModelLabsProjekat\\ModelLabs\\Results\\Gids.txt");
             foreach (KeyValuePair<long, long> kvp in globalIdPairs)
             {
                 sb.AppendFormat("Client globalId: 0x{0:x16}\t - Server globalId: 0x{1:x16}\n", kvp.Key, kvp.Value);
-            }
-
+				sw.WriteLine(kvp.Value);
+			}
+			sw.Close();
+			
             return sb.ToString();
         }
 	}

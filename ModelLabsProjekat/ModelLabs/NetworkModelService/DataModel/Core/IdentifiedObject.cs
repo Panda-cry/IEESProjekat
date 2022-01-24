@@ -43,6 +43,8 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 		/// Description of identified object
 		/// </summary>		
 		private string description = string.Empty;
+
+		private string aliasName = string.Empty;
 		
 		/// <summary>
 		/// Initializes a new instance of the IdentifiedObject class.
@@ -56,6 +58,12 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 		/// <summary>
 		/// Gets or sets global id of the entity (identified object).
 		/// </summary>			
+		
+		public string AliasName
+        {
+            get { return aliasName; }
+            set { aliasName = value; }
+        }
 		public long GlobalId
 		{
 			get
@@ -133,7 +141,7 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 			else
 			{
 				IdentifiedObject io = (IdentifiedObject)x;
-				return ((io.GlobalId == this.GlobalId) && (io.name == this.name) && (io.mrid == this.mrid) &&
+				return ((io.GlobalId == this.GlobalId) && (io.AliasName == this.AliasName)&& (io.name == this.name) && (io.mrid == this.mrid) &&
 						(io.description == this.description));
 			}
 		}
@@ -151,7 +159,7 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 			{
 				case ModelCode.IDOBJ_GID:				
 				case ModelCode.IDOBJ_NAME:
-				case ModelCode.IDOBJ_DESCRIPTION:
+				case ModelCode.IDOBJ_ALIASNAME:
 				case ModelCode.IDOBJ_MRID:
 					return true;
 
@@ -176,8 +184,8 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 					property.SetValue(mrid);
 					break;
 
-                case ModelCode.IDOBJ_DESCRIPTION:
-                    property.SetValue(description);
+                case ModelCode.IDOBJ_ALIASNAME:
+                    property.SetValue(AliasName);
                     break;
 			
 				default:
@@ -195,8 +203,8 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 					name = property.AsString();					
 					break;
 
-				case ModelCode.IDOBJ_DESCRIPTION:
-					description = property.AsString();					
+				case ModelCode.IDOBJ_ALIASNAME:
+					aliasName = property.AsString();					
 					break;
 
 				case ModelCode.IDOBJ_MRID:					

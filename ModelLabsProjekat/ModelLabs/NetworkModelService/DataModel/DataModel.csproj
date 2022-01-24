@@ -84,16 +84,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\BaseVoltage .cs" />
-    <Compile Include="Core\ConductingEquipment.cs" />
-    <Compile Include="Core\Equipment.cs" />
-    <Compile Include="Core\Location.cs" />
+    <Compile Include="Core\Asset.cs" />
+    <Compile Include="Core\AssetContainer.cs" />
+    <Compile Include="Core\AssetInfo.cs" />
+    <Compile Include="Core\AssetModel.cs" />
+    <Compile Include="Core\AssetOrganisationRole.cs" />
+    <Compile Include="Core\AssetOwner.cs" />
+    <Compile Include="Core\ComMedia.cs" />
     <Compile Include="Core\IdentifiedObject.cs" />
-    <Compile Include="Core\PowerSystemResource.cs" />
+    <Compile Include="Core\OrganisationRole.cs" />
+    <Compile Include="Core\ProductAssetModel.cs" />
+    <Compile Include="Core\Seal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Wires\WindingTest.cs" />
-    <Compile Include="Wires\PowerTransformer.cs" />
-    <Compile Include="Wires\TransformerWinding.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Common\Common.csproj">

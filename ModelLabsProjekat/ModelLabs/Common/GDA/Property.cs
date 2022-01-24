@@ -61,10 +61,11 @@ namespace FTN.Common
 		/// <summary>
 		/// Initializes a new instance of the Property class
 		/// </summary>
-		public Property()
+		public Property(ModelCode id)
 		{
+			this.id = id;
+			this.value = new PropertyValue();
 		}
-
 		public Property(Property toCopy)
 		{
 			this.id = toCopy.id;
@@ -75,7 +76,7 @@ namespace FTN.Common
 		/// Initializes a new instance of the Property class
 		/// </summary>
 		/// <param name="id">property ID</param>
-		public Property(ModelCode id)
+		public Property(ModelCode id, Weight weightTotal)
 		{
 			this.id = id;
             this.value = new PropertyValue();
@@ -914,7 +915,9 @@ namespace FTN.Common
 			PropertyType type = this.Type;
 			if (type == PropertyType.DateTime)
 			{
-				return new DateTime(value.LongValue, DateTimeKind.Utc);
+				DateTime date = new DateTime(value.LongValue);
+				return date;
+				//new DateTime(, DateTimeKind.Utc).Date;
 			}
 			else
 			{

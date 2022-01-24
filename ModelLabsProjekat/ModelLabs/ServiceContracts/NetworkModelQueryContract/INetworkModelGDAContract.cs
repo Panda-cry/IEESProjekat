@@ -19,6 +19,8 @@ namespace FTN.ServiceContracts
 		[OperationContract]	
 		UpdateResult ApplyUpdate(Delta delta);
 
+		[OperationContract]
+		List<long> getData();
 		/// <summary>
 		/// Gets resource description for resource specified by id.
 		/// </summary>		

@@ -1,0 +1,381 @@
+Profile: 
+* members of Package_Assets
+	 #AcceptanceTest
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = AcceptanceTest
+		 subClassOf = 
+		 belongsToCategory = #Package_Assets
+	 #AssetInfo
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = AssetInfo
+		 subClassOf = #IdentifiedObject
+		 belongsToCategory = #Package_Assets
+		 has Properties : 
+			AssetInfo.AssetModel
+				 label = AssetModel
+				 dataType = 
+				 range = #AssetModel
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					byreference
+
+	 #AssetModelUsageKind
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = AssetModelUsageKind
+		 Enumeration class
+		 subClassOf = 
+		 belongsToCategory = #Package_Assets
+			 has enum members : 
+				AssetModelUsageKind.customerSubstation
+				AssetModelUsageKind.distributionOverhead
+				AssetModelUsageKind.distributionUnderground
+				AssetModelUsageKind.other
+				AssetModelUsageKind.streetlight
+				AssetModelUsageKind.substation
+				AssetModelUsageKind.transmission
+				AssetModelUsageKind.unknown
+	 #AssetOrganisationRole
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = AssetOrganisationRole
+		 subClassOf = #OrganisationRole
+		 belongsToCategory = #Package_Assets
+	 #AssetOwner
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = AssetOwner
+		 subClassOf = #AssetOrganisationRole
+		 belongsToCategory = #Package_Assets
+	 #CorporateStandardKind
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = CorporateStandardKind
+		 Enumeration class
+		 subClassOf = 
+		 belongsToCategory = #Package_Assets
+			 has enum members : 
+				CorporateStandardKind.experimental
+				CorporateStandardKind.other
+				CorporateStandardKind.standard
+				CorporateStandardKind.underEvaluation
+	 #LifecycleDate
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = LifecycleDate
+		 subClassOf = 
+		 belongsToCategory = #Package_Assets
+	 #ProductAssetModel
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = ProductAssetModel
+		 subClassOf = #AssetModel
+		 belongsToCategory = #Package_Assets
+		 has Properties : 
+			ProductAssetModel.corporateStandardKind
+				 label = corporateStandardKind
+				 dataType = 
+				 range = #CorporateStandardKind
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			ProductAssetModel.modelNumber
+				 label = modelNumber
+				 dataType = http://www.w3.org/2001/XMLSchema#string
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			ProductAssetModel.modelVersion
+				 label = modelVersion
+				 dataType = http://www.w3.org/2001/XMLSchema#string
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			ProductAssetModel.usageKind
+				 label = usageKind
+				 dataType = 
+				 range = #AssetModelUsageKind
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			ProductAssetModel.weightTotal
+				 label = weightTotal
+				 dataType = 
+				 range = #Weight
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+	 #SealConditionKind
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = SealConditionKind
+		 Enumeration class
+		 subClassOf = 
+		 belongsToCategory = #Package_Assets
+			 has enum members : 
+				SealConditionKind.broken
+				SealConditionKind.locked
+				SealConditionKind.missing
+				SealConditionKind.open
+				SealConditionKind.other
+	 #SealKind
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = SealKind
+		 Enumeration class
+		 subClassOf = 
+		 belongsToCategory = #Package_Assets
+			 has enum members : 
+				SealKind.lead
+				SealKind.lock
+				SealKind.other
+				SealKind.steel
+* members of Package_Common
+	 #ElectronicAddress
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = ElectronicAddress
+		 subClassOf = 
+		 belongsToCategory = #Package_Common
+	 #OrganisationRole
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = OrganisationRole
+		 subClassOf = #IdentifiedObject
+		 belongsToCategory = #Package_Common
+	 #Status
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = Status
+		 subClassOf = 
+		 belongsToCategory = #Package_Common
+* members of Package_Core
+	 #IdentifiedObject
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = IdentifiedObject
+		 subClassOf = 
+		 belongsToCategory = #Package_Core
+		 has Properties : 
+			IdentifiedObject.aliasName
+				 label = aliasName
+				 dataType = http://www.w3.org/2001/XMLSchema#string
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			IdentifiedObject.mRID
+				 label = mRID
+				 dataType = http://www.w3.org/2001/XMLSchema#string
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			IdentifiedObject.name
+				 label = name
+				 dataType = http://www.w3.org/2001/XMLSchema#string
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+* members of Package_Domain
+	 #Money
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = Money
+		 subClassOf = 
+		 belongsToCategory = #Package_Domain
+	 #PerCent
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = PerCent
+		 subClassOf = 
+		 belongsToCategory = #Package_Domain
+	 #Weight
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = Weight
+		 subClassOf = 
+		 belongsToCategory = #Package_Domain
+* members of Package_IEC61968
+* members of Package_IEC61970
+* members of Package_IES_Projects
+	 #Asset
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = Asset
+		 subClassOf = #IdentifiedObject
+		 belongsToCategory = #Package_IES_Projects
+		 has Properties : 
+			Asset.acceptanceTest
+				 label = acceptanceTest
+				 dataType = 
+				 range = #AcceptanceTest
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Asset.AssetContainer
+				 label = AssetContainer
+				 dataType = 
+				 range = #AssetContainer
+				 multiplicity = M:0..1
+
+			Asset.AssetInfo
+				 label = AssetInfo
+				 dataType = 
+				 range = #AssetInfo
+				 multiplicity = M:0..1
+
+			Asset.critical
+				 label = critical
+				 dataType = http://www.w3.org/2001/XMLSchema#boolean
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Asset.electronicAddress
+				 label = electronicAddress
+				 dataType = 
+				 range = #ElectronicAddress
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Asset.initialCondition
+				 label = initialCondition
+				 dataType = http://www.w3.org/2001/XMLSchema#string
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Asset.initialLossOfLife
+				 label = initialLossOfLife
+				 dataType = 
+				 range = #PerCent
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Asset.lifecycle
+				 label = lifecycle
+				 dataType = 
+				 range = #LifecycleDate
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Asset.lotNumber
+				 label = lotNumber
+				 dataType = http://www.w3.org/2001/XMLSchema#string
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Asset.purchasePrice
+				 label = purchasePrice
+				 dataType = 
+				 range = #Money
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Asset.serialNumber
+				 label = serialNumber
+				 dataType = http://www.w3.org/2001/XMLSchema#string
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Asset.status
+				 label = status
+				 dataType = 
+				 range = #Status
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Asset.type
+				 label = type
+				 dataType = http://www.w3.org/2001/XMLSchema#string
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Asset.utcNumber
+				 label = utcNumber
+				 dataType = http://www.w3.org/2001/XMLSchema#string
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+	 #AssetContainer
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = AssetContainer
+		 subClassOf = #Asset
+		 belongsToCategory = #Package_IES_Projects
+	 #AssetModel
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = AssetModel
+		 subClassOf = #IdentifiedObject
+		 belongsToCategory = #Package_IES_Projects
+		 has Properties : 
+			AssetModel.AssetInfo
+				 label = AssetInfo
+				 dataType = 
+				 range = #AssetInfo
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					byreference
+
+	 #ComMedia
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = ComMedia
+		 subClassOf = #Asset
+		 belongsToCategory = #Package_IES_Projects
+	 #Seal
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = Seal
+		 subClassOf = #IdentifiedObject
+		 belongsToCategory = #Package_IES_Projects
+		 has Properties : 
+			Seal.appliedDateTime
+				 label = appliedDateTime
+				 dataType = http://www.w3.org/2001/XMLSchema#dateTime
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Seal.AssetContainer
+				 label = AssetContainer
+				 dataType = 
+				 range = #AssetContainer
+				 multiplicity = M:0..1
+
+			Seal.condition
+				 label = condition
+				 dataType = 
+				 range = #SealConditionKind
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Seal.kind
+				 label = kind
+				 dataType = 
+				 range = #SealKind
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Seal.sealNumber
+				 label = sealNumber
+				 dataType = http://www.w3.org/2001/XMLSchema#string
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+* members of Package_TC57CIM
+

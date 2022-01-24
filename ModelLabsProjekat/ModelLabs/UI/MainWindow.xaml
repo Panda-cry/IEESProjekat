@@ -1,0 +1,21 @@
+﻿<Window x:Class="UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="getValues" Content="GetValues" HorizontalAlignment="Left" Height="22" Margin="606,311,0,0" VerticalAlignment="Top" Width="142" Click="Button_Click"/>
+        <Button Content="GetExtentValues" HorizontalAlignment="Left" Height="20" Margin="606,338,0,0" VerticalAlignment="Top" Width="142" RenderTransformOrigin="0.514,1.05" Click="Button_Click_1"/>
+        <Button Content="GetRelatedValues" HorizontalAlignment="Left" Height="20" Margin="606,363,0,0" VerticalAlignment="Top" Width="142" Click="Button_Click_2"/>
+        <TextBox x:Name="textBoxFile" HorizontalAlignment="Left" Height="373" Margin="10,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="539" IsReadOnly="True" FontSize="9"/>
+        <ComboBox x:Name="comboGids" ItemsSource="{Binding Path=gids}" HorizontalAlignment="Left" Height="22" Margin="13,10,0,0" VerticalAlignment="Top" Width="170" RenderTransformOrigin="0.329,0.627"/>
+        <ComboBox x:Name="comboDMS" ItemsSource="{Binding Path=collection}" HorizontalAlignment="Left" Height="22" Margin="188,10,0,0" VerticalAlignment="Top" Width="178" SelectionChanged="comboDMS_SelectionChanged"/>
+        <Button x:Name="LoadGids" Content="LoadGids" HorizontalAlignment="Left" Height="22" Margin="606,388,0,0" VerticalAlignment="Top" Width="142" Click="LoadGids_Click" />
+        <ListBox Name="items"  SelectionMode="Extended" ItemsSource="{Binding properties}" HorizontalAlignment="Left" Height="296" Margin="554,10,0,0" VerticalAlignment="Top" Width="230"/>
+        <ComboBox x:Name="comboRelated" ItemsSource="{Binding related}" HorizontalAlignment="Left" Height="22" Margin="371,10,0,0" VerticalAlignment="Top" Width="178" />
+
+    </Grid>
+</Window>

@@ -13,3 +13,8 @@ D:\shared\simesVezbe\Projekat\ModelLabsProjekat\ModelLabs\bin\CIMParser.pdb
 D:\shared\simesVezbe\Projekat\ModelLabsProjekat\ModelLabs\CIMParser\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\shared\simesVezbe\Projekat\ModelLabsProjekat\ModelLabs\CIMParser\obj\x86\Debug\CIMParser.dll
 D:\shared\simesVezbe\Projekat\ModelLabsProjekat\ModelLabs\CIMParser\obj\x86\Debug\CIMParser.pdb
+C:\Users\TUF\Desktop\IEESProjekat\ModelLabsProjekat\ModelLabs\bin\CIMParser.dll
+C:\Users\TUF\Desktop\IEESProjekat\ModelLabsProjekat\ModelLabs\bin\CIMParser.pdb
+C:\Users\TUF\Desktop\IEESProjekat\ModelLabsProjekat\ModelLabs\CIMParser\obj\x86\Debug\CIMParser.csproj.CoreCompileInputs.cache
+C:\Users\TUF\Desktop\IEESProjekat\ModelLabsProjekat\ModelLabs\CIMParser\obj\x86\Debug\CIMParser.dll
+C:\Users\TUF\Desktop\IEESProjekat\ModelLabsProjekat\ModelLabs\CIMParser\obj\x86\Debug\CIMParser.pdb

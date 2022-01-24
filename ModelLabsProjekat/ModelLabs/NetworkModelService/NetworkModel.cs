@@ -8,7 +8,6 @@ using System.Xml;
 using FTN.Common;
 using FTN.Services.NetworkModelService.DataModel;
 using FTN.Services.NetworkModelService.DataModel.Core;
-using FTN.Services.NetworkModelService.DataModel.Wires;
 
 namespace FTN.Services.NetworkModelService
 {	
@@ -17,8 +16,10 @@ namespace FTN.Services.NetworkModelService
 		/// <summary>
 		/// Dictionaru which contains all data: Key - DMSType, Value - Container
 		/// </summary>
-		private Dictionary<DMSType, Container> networkDataModel;		
 
+		static int show = 0;
+		private Dictionary<DMSType, Container> networkDataModel;
+		public static List<long> models = new List<long>();
 		/// <summary>
 		/// ModelResourceDesc class contains metadata of the model
 		/// </summary>
@@ -261,6 +262,7 @@ namespace FTN.Services.NetworkModelService
 				}				 				
 
 			}
+			
 			catch (Exception ex)
 			{
 				string message = string.Format("Applying delta to network model failed. {0}.", ex.Message);
@@ -278,19 +280,31 @@ namespace FTN.Services.NetworkModelService
 
 				if (updateResult.Result == ResultType.Succeeded)
 				{
+                    
 					string mesage = "Applying delta to network model successfully finished.";
 					CommonTrace.WriteTrace(CommonTrace.TraceInfo, mesage);
+				
 					updateResult.Message = mesage;
+					//ovde
+					foreach (var item in updateResult.getter)
+					{
+						models.Add(item);
+					}
+
+
 				}				
 			}
 
 			return updateResult;
 		}
-
-        /// <summary>
-        /// Inserts entity into the network model.
-        /// </summary>
-        /// <param name="rd">Description of the resource that should be inserted</param>        
+		public List<long> Geters()
+		{
+			return models;
+		}
+		/// <summary>
+		/// Inserts entity into the network model.
+		/// </summary>
+		/// <param name="rd">Description of the resource that should be inserted</param>        
 		private void InsertEntity(ResourceDescription rd)
 		{
 			if (rd == null)
@@ -322,6 +336,8 @@ namespace FTN.Services.NetworkModelService
 				if (ContainerExists(type))
 				{
 					container = GetContainer(type);
+
+                    // Console.WriteLine("Data");
 				}
 				else
 				{

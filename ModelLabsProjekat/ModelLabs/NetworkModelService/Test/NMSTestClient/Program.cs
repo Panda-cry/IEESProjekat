@@ -68,7 +68,7 @@ namespace FTN.Services.NetworkModelService.TestClient
                             Console.WriteLine(message);
                             CommonTrace.WriteTrace(CommonTrace.TraceError, message);
                         }
-
+                        
 					}
 					else if (str == "2")
 					{

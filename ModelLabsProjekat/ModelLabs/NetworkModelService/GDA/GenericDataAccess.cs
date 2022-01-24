@@ -17,7 +17,7 @@ namespace FTN.Services.NetworkModelService
 		private static Dictionary<int, ResourceIterator> resourceItMap = new Dictionary<int, ResourceIterator>();
 		private static int resourceItId = 0;
 		protected static NetworkModel nm = null;
-
+		public List<long> datas = new List<long>();
 		public GenericDataAccess()
 		{
 		}
@@ -32,8 +32,16 @@ namespace FTN.Services.NetworkModelService
 
 		public UpdateResult ApplyUpdate(Delta delta)
 		{
+            foreach (var item in nm.Geters())
+            {
+				datas.Add(item);
+            }
 			return nm.ApplyDelta(delta);
 		}
+		public List<long> getData()
+        {
+			return datas;
+        }
 
 		public ResourceDescription GetValues(long resourceId, List<ModelCode> propIds)
 		{

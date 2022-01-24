@@ -15,6 +15,10 @@ namespace FTN.ServiceContracts
 		{
 			return Channel.ApplyUpdate(delta);
 		}
+		public List<long> getData()
+        {
+			return Channel.getData();
+        }
 
 		public ResourceDescription GetValues(long resourceId, List<ModelCode> propIds)
 		{

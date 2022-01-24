@@ -1,0 +1,222 @@
+﻿<delta id="0">
+  <operations>
+    <operation type="insert">
+      <ResourceDescriptions count="14">
+        <ResourceDescription>
+          <id gid="0x00000001ffffffff" type="ASSET_INFO" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="Asset Info" />
+            <Property id="IDOBJ_NAME" value="ASSETINFO1" />
+            <Property id="IDOBJ_ALIASNAME" value="Asset Info 1" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000001fffffffe" type="ASSET_INFO" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="Asset Info" />
+            <Property id="IDOBJ_NAME" value="ASSETINFO2" />
+            <Property id="IDOBJ_ALIASNAME" value="Asset Info 2" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000002ffffffff" type="PRODUCTASSET_MODEL" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="Product Asset Model" />
+            <Property id="IDOBJ_NAME" value="PRODASM1" />
+            <Property id="IDOBJ_ALIASNAME" value="Product Asset Model 1" />
+            <Property id="ASSETMODEL_ASSETINFO" value="0x00000001ffffffff" />
+            <Property id="PRODUCTASSET_MODEL_STANDARDKIND" value="standard" />
+            <Property id="PRODUCTASSET_MODEL_USERKIND" value="distributionUnderground" />
+            <Property id="PRODUCTASSET_MODEL_NUMBER" value="ModelNumber1" />
+            <Property id="PRODUCTASSET_MODEL_VERSION" value="ModelVersion1" />
+            <Property id="PRODUCTASSET_MODEL_WEIGHT" value="123.3" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000002fffffffe" type="PRODUCTASSET_MODEL" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="Product Asset Model" />
+            <Property id="IDOBJ_NAME" value="PRODASM2" />
+            <Property id="IDOBJ_ALIASNAME" value="Product Asset Model 2" />
+            <Property id="ASSETMODEL_ASSETINFO" value="0x00000001fffffffe" />
+            <Property id="PRODUCTASSET_MODEL_STANDARDKIND" value="other" />
+            <Property id="PRODUCTASSET_MODEL_USERKIND" value="other" />
+            <Property id="PRODUCTASSET_MODEL_NUMBER" value="ModelNumber12" />
+            <Property id="PRODUCTASSET_MODEL_VERSION" value="ModelVersion2" />
+            <Property id="PRODUCTASSET_MODEL_WEIGHT" value="222.2" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000003ffffffff" type="ASSET_OWNER" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="Asset Owner" />
+            <Property id="IDOBJ_NAME" value="ASSETOWNER1" />
+            <Property id="IDOBJ_ALIASNAME" value="Asset Owner 1" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000003fffffffe" type="ASSET_OWNER" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="Asset Owner" />
+            <Property id="IDOBJ_NAME" value="ASSETOWNER2" />
+            <Property id="IDOBJ_ALIASNAME" value="Asset Owner 2" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000006ffffffff" type="ASSET_CONTAINER" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="Asset Container" />
+            <Property id="IDOBJ_NAME" value="ASSCONT1" />
+            <Property id="IDOBJ_ALIASNAME" value="Asset Container 1" />
+            <Property id="ASSET_ACCEPTENCETEST" value="0" />
+            <Property id="ASSET_CRTITICAL" value="1" />
+            <Property id="ASSET_ELECTRONICADDRESS" value="Electornic Address 1" />
+            <Property id="ASSET_INITIALCONDITION" value="Initial Condition 1" />
+            <Property id="ASSET_IITIALOSTOFLIFE" value="11.11" />
+            <Property id="ASSET_LIFECYCLE" value="638030304000000000" />
+            <Property id="ASSET_LOTNUMBER" value="Lot Number 1" />
+            <Property id="ASSET_PURCHASEPRICE" value="123.23" />
+            <Property id="ASSET_SERIALNUMBER" value="Serial Number 1" />
+            <Property id="ASSET_STATUS" value="Status 1" />
+            <Property id="ASSET_TYPE" value="Type 1" />
+            <Property id="ASSET_UTCNUMBER" value="UTC Number 1" />
+            <Property id="ASSET_ASSETINFO" value="0x00000001ffffffff" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000006fffffffe" type="ASSET_CONTAINER" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="Asset Container" />
+            <Property id="IDOBJ_NAME" value="ASSCONT2" />
+            <Property id="IDOBJ_ALIASNAME" value="Asset Container 2" />
+            <Property id="ASSET_ACCEPTENCETEST" value="1" />
+            <Property id="ASSET_CRTITICAL" value="1" />
+            <Property id="ASSET_ELECTRONICADDRESS" value="Electornic Address 2" />
+            <Property id="ASSET_INITIALCONDITION" value="Initial Condition 2" />
+            <Property id="ASSET_IITIALOSTOFLIFE" value="113.11" />
+            <Property id="ASSET_LIFECYCLE" value="638032032000000000" />
+            <Property id="ASSET_LOTNUMBER" value="Lot Number 2" />
+            <Property id="ASSET_PURCHASEPRICE" value="12.1" />
+            <Property id="ASSET_SERIALNUMBER" value="Serial Number 2" />
+            <Property id="ASSET_STATUS" value="Status 2" />
+            <Property id="ASSET_TYPE" value="Type 2" />
+            <Property id="ASSET_UTCNUMBER" value="UTC Number 2" />
+            <Property id="ASSET_ASSETINFO" value="0x00000001ffffffff" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000004ffffffff" type="ASSET" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="Asset" />
+            <Property id="IDOBJ_NAME" value="ASSET1" />
+            <Property id="IDOBJ_ALIASNAME" value="Asset 1" />
+            <Property id="ASSET_ACCEPTENCETEST" value="0" />
+            <Property id="ASSET_CRTITICAL" value="1" />
+            <Property id="ASSET_ELECTRONICADDRESS" value="Electornic Address 1" />
+            <Property id="ASSET_INITIALCONDITION" value="Initial Condition 1" />
+            <Property id="ASSET_IITIALOSTOFLIFE" value="11.11" />
+            <Property id="ASSET_LIFECYCLE" value="638033760000000000" />
+            <Property id="ASSET_LOTNUMBER" value="Lot Number 1" />
+            <Property id="ASSET_PURCHASEPRICE" value="123.1" />
+            <Property id="ASSET_SERIALNUMBER" value="Serial Number 1" />
+            <Property id="ASSET_STATUS" value="Status 1" />
+            <Property id="ASSET_TYPE" value="Type 1" />
+            <Property id="ASSET_UTCNUMBER" value="UTC Number 1" />
+            <Property id="ASSET_ASSETCONTAINER" value="0x00000006ffffffff" />
+            <Property id="ASSET_ASSETINFO" value="0x00000001ffffffff" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000004fffffffe" type="ASSET" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="Asset" />
+            <Property id="IDOBJ_NAME" value="ASSET2" />
+            <Property id="IDOBJ_ALIASNAME" value="Asset 2" />
+            <Property id="ASSET_ACCEPTENCETEST" value="1" />
+            <Property id="ASSET_CRTITICAL" value="1" />
+            <Property id="ASSET_ELECTRONICADDRESS" value="Electornic Address 2" />
+            <Property id="ASSET_INITIALCONDITION" value="Initial Condition 2" />
+            <Property id="ASSET_IITIALOSTOFLIFE" value="113.11" />
+            <Property id="ASSET_LIFECYCLE" value="637993152000000000" />
+            <Property id="ASSET_LOTNUMBER" value="Lot Number 2" />
+            <Property id="ASSET_PURCHASEPRICE" value="12.1" />
+            <Property id="ASSET_SERIALNUMBER" value="Serial Number 2" />
+            <Property id="ASSET_STATUS" value="Status 2" />
+            <Property id="ASSET_TYPE" value="Type 2" />
+            <Property id="ASSET_UTCNUMBER" value="UTC Number 2" />
+            <Property id="ASSET_ASSETCONTAINER" value="0x00000006fffffffe" />
+            <Property id="ASSET_ASSETINFO" value="0x00000001ffffffff" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000007ffffffff" type="SEAL" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="Seal" />
+            <Property id="IDOBJ_NAME" value="SEAL1" />
+            <Property id="IDOBJ_ALIASNAME" value="Seal 1" />
+            <Property id="SEAL_APPLIEDDATETIME" value="637441920000000000" />
+            <Property id="SEAL_SEALNUMBER" value="Seal Number 1" />
+            <Property id="SEAL_KIND" value="steel" />
+            <Property id="SEAL_CONDITION" value="locked" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000007fffffffe" type="SEAL" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="Seal" />
+            <Property id="IDOBJ_NAME" value="SEAL2" />
+            <Property id="IDOBJ_ALIASNAME" value="Seal 2" />
+            <Property id="SEAL_APPLIEDDATETIME" value="634225248000000000" />
+            <Property id="SEAL_SEALNUMBER" value="Seal Number 2" />
+            <Property id="SEAL_KIND" value="lead" />
+            <Property id="SEAL_CONDITION" value="broken" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000005ffffffff" type="COMMEDIA" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="ComMedia" />
+            <Property id="IDOBJ_NAME" value="COMMEDIA1" />
+            <Property id="IDOBJ_ALIASNAME" value="ComMedia 1" />
+            <Property id="ASSET_ACCEPTENCETEST" value="1" />
+            <Property id="ASSET_CRTITICAL" value="1" />
+            <Property id="ASSET_ELECTRONICADDRESS" value="Electornic Address 1" />
+            <Property id="ASSET_INITIALCONDITION" value="Initial Condition 1" />
+            <Property id="ASSET_IITIALOSTOFLIFE" value="111.11" />
+            <Property id="ASSET_LIFECYCLE" value="634886208000000000" />
+            <Property id="ASSET_LOTNUMBER" value="Lot Number 1" />
+            <Property id="ASSET_PURCHASEPRICE" value="133.3" />
+            <Property id="ASSET_SERIALNUMBER" value="Serial Number 1" />
+            <Property id="ASSET_STATUS" value="Status 1" />
+            <Property id="ASSET_TYPE" value="Type 1" />
+            <Property id="ASSET_UTCNUMBER" value="UTC Number 1" />
+            <Property id="ASSET_ASSETCONTAINER" value="0x00000006fffffffe" />
+            <Property id="ASSET_ASSETINFO" value="0x00000001ffffffff" />
+          </Properties>
+        </ResourceDescription>
+        <ResourceDescription>
+          <id gid="0x00000005fffffffe" type="COMMEDIA" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="ComMedia" />
+            <Property id="IDOBJ_NAME" value="COMMEDIA2" />
+            <Property id="IDOBJ_ALIASNAME" value="ComMedia 2" />
+            <Property id="ASSET_ACCEPTENCETEST" value="0" />
+            <Property id="ASSET_CRTITICAL" value="1" />
+            <Property id="ASSET_ELECTRONICADDRESS" value="Electornic Address 2" />
+            <Property id="ASSET_INITIALCONDITION" value="Initial Condition 2" />
+            <Property id="ASSET_IITIALOSTOFLIFE" value="142.11" />
+            <Property id="ASSET_LIFECYCLE" value="631598688000000000" />
+            <Property id="ASSET_LOTNUMBER" value="Lot Number 2" />
+            <Property id="ASSET_PURCHASEPRICE" value="12.123" />
+            <Property id="ASSET_SERIALNUMBER" value="Serial Number 2" />
+            <Property id="ASSET_STATUS" value="Status 2" />
+            <Property id="ASSET_TYPE" value="Type 2" />
+            <Property id="ASSET_UTCNUMBER" value="UTC Number 2" />
+            <Property id="ASSET_ASSETCONTAINER" value="0x00000006fffffffe" />
+            <Property id="ASSET_ASSETINFO" value="0x00000001fffffffe" />
+          </Properties>
+        </ResourceDescription>
+      </ResourceDescriptions>
+    </operation>
+  </operations>
+</delta>
