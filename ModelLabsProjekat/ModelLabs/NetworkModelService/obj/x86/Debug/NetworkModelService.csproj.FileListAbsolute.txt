@@ -13,10 +13,3 @@ D:\shared\simesVezbe\Projekat\ModelLabsProjekat\ModelLabs\bin\FTN.Services.Netwo
 D:\shared\simesVezbe\Projekat\ModelLabsProjekat\ModelLabs\NetworkModelService\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\shared\simesVezbe\Projekat\ModelLabsProjekat\ModelLabs\NetworkModelService\obj\x86\Debug\FTN.Services.NetworkModelService.dll
 D:\shared\simesVezbe\Projekat\ModelLabsProjekat\ModelLabs\NetworkModelService\obj\x86\Debug\FTN.Services.NetworkModelService.pdb
-C:\Users\TUF\Desktop\IEESProjekat\ModelLabsProjekat\ModelLabs\bin\FTN.Services.NetworkModelService.dll
-C:\Users\TUF\Desktop\IEESProjekat\ModelLabsProjekat\ModelLabs\bin\FTN.Services.NetworkModelService.pdb
-C:\Users\TUF\Desktop\IEESProjekat\ModelLabsProjekat\ModelLabs\NetworkModelService\obj\x86\Debug\NetworkModelService.csproj.AssemblyReference.cache
-C:\Users\TUF\Desktop\IEESProjekat\ModelLabsProjekat\ModelLabs\NetworkModelService\obj\x86\Debug\NetworkModelService.csproj.CoreCompileInputs.cache
-C:\Users\TUF\Desktop\IEESProjekat\ModelLabsProjekat\ModelLabs\NetworkModelService\obj\x86\Debug\NetworkModelService.csproj.CopyComplete
-C:\Users\TUF\Desktop\IEESProjekat\ModelLabsProjekat\ModelLabs\NetworkModelService\obj\x86\Debug\FTN.Services.NetworkModelService.dll
-C:\Users\TUF\Desktop\IEESProjekat\ModelLabsProjekat\ModelLabs\NetworkModelService\obj\x86\Debug\FTN.Services.NetworkModelService.pdb
